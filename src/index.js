@@ -21,9 +21,8 @@ module.exports = function zeros(expression) {
         if((factorial.indexOf("!!") > -1) && (number % 2 !== 0)) {
             if(number >= 25) count5 += 1;
             if(number >= 75) count5 += 1;
-            if(number >= 50) count5 += 1;
-            if(number >= 100) count5 += 1;
-            count5 += Math.floor(number/5);
+            const a = Math.floor(number/5);
+            count5 +=  a - Math.floor(a / 2);
         }
         if((factorial.indexOf("!!") > -1) && (number % 2 === 0)) {
             count2 += Math.floor(number/2);
